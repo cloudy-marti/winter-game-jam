@@ -24,7 +24,8 @@ namespace _Scripts.Player
 			Vector3 inputs = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
 			inputs *= _speed;
-			_rangeTransform.position = _playerTransform.position + inputs * 1.5f;
+			if (inputs.magnitude > 0)
+				_rangeTransform.position = _playerTransform.position + inputs * 1.5f;
 
 			inputs *= (Input.GetAxisRaw("Run") > 0 ? _runSpeedMultiplier : 1f);
 			_playerTransform.DOMove(inputs + _playerTransform.position, 1f);
