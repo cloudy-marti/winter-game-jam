@@ -11,7 +11,7 @@ namespace _Scripts.GUI
 		void Start ()
 		{
 			_canvasGroup = GetComponent<CanvasGroup>();
-			_canvasGroup.DOFade(1f, 1f);
+			_canvasGroup.DOFade(1f, 1.5f);
 		}
 	}
 }
