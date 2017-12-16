@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5856037f81fd815428bdbcd5a86740f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _toolTip: {fileID: 11400000, guid: 7d64371066d1e6241a6393fc1e6d8f08, type: 2}
+  _dialogue: {fileID: 11400000, guid: 75fca0f3a47a2524cb63b133af564d0e, type: 2}
 --- !u!1 &1596201926
 GameObject:
   m_ObjectHideFlags: 0

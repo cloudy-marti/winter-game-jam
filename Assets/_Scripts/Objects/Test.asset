@@ -8,7 +8,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: TEST
-  m_EditorClassIdentifier: Assembly-CSharp:_Scripts.Tooltips:ScriptableToolTips
-  Description: This is a test
+  m_Script: {fileID: 11500000, guid: 458a6838426c43f45bfcfff8b23d19c4, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  Speakers:
+  - Narrateur
+  - Narrateur2
+  Speeches:
+  - J'ai rien a dire
+  - Moi aussi
