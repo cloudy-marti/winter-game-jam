@@ -8,6 +8,7 @@ namespace _Scripts.GUI
 	{
 		public static DialogueManager Instance { get; private set; }
 		private CanvasGroup _canvasGroup;
+
 		[SerializeField] private Text _diagText;
 
 		DialogueManager()

@@ -200,6 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 1
   _runSpeedMultiplier: 2
+  _raycastRange: 20
 --- !u!124 &124923579073878476
 Behaviour:
   m_ObjectHideFlags: 1
