@@ -7,7 +7,7 @@ namespace _Scripts.Player
 	{
 		public static PlayerManager Instance { get; private set; }
 		public bool DialogueMode { get; set; }
-		private GameObject _playerInstance = null;
+		private GameObject _playerInstance;
 
 		[SerializeField] private GameObject _playerPrefab;
 
