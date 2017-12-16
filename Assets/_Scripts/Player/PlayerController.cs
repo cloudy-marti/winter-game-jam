@@ -27,7 +27,6 @@ namespace _Scripts.Player
 		{
 			if (Frozen) return;
 
-
 			Vector3 inputs = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
 			if (inputs.magnitude > 0)
@@ -41,12 +40,13 @@ namespace _Scripts.Player
 
 			_playerTransform.DOMove(_playerTransform.position + inputs, 1f);
 
+			if (!(Input.GetAxis("Interact") > 0)) return;
+			RaycastHit raycastHit;
 
-			if (Input.GetAxis("Interact") > 0)
-			{
-				if (Physics.Raycast(_raycastRay))
-					Debug.Log("Interect");
-			}
+			if (!Physics.Raycast(_raycastRay, out raycastHit)) return;
+
+			if (raycastHit.transform.CompareTag("InteractiveObject"))
+				raycastHit.transform.GetComponent<InteractiveObject>().Interact();
 		}
 
 		void OnDrawGizmos()

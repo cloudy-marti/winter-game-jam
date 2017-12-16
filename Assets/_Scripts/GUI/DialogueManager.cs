@@ -7,9 +7,11 @@ namespace _Scripts.GUI
 	public class DialogueManager : MonoBehaviour
 	{
 		public static DialogueManager Instance { get; private set; }
-		private CanvasGroup _canvasGroup;
 
-		[SerializeField] private Text _diagText;
+		[SerializeField] private GameObject _dialogPrefab;
+		private GameObject _dialogPrefabInstance;
+		private Text _diagText;
+		private CanvasGroup _canvasGroup;
 
 		DialogueManager()
 		{
@@ -19,8 +21,10 @@ namespace _Scripts.GUI
 		// Use this for initialization
 		void Start ()
 		{
-			_canvasGroup = GetComponent<CanvasGroup>();
-			Show("Je susi un test");
+			_dialogPrefabInstance = Instantiate(_dialogPrefab);
+			_dialogPrefabInstance.transform.SetParent(transform);
+			_canvasGroup = _dialogPrefabInstance.GetComponent<CanvasGroup>();
+			_diagText = _dialogPrefabInstance.transform.Find("DiagBackground/DiagText").GetComponent<Text>();
 		}
 
 		public void Show(string dialogue)

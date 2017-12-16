@@ -10,7 +10,7 @@ namespace _Scripts.Objects
 
 		public void Interact()
 		{
-			DialogueManager.Instance.Show("I am a test");
+			DialogueManager.Instance.Show(_toolTip.Description);
 		}
 	}
 }
