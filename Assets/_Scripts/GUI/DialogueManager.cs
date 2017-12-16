@@ -59,6 +59,8 @@ namespace _Scripts.GUI
 				PlayerManager.Instance.UnfreezePlayer();
 				_dialogueIndex = 0;
 				_faceOrderIndex = 0;
+				_rightSpeaker.color = _leftSpeaker.color = Color.clear;
+				_rightSpeaker.sprite = _leftSpeaker.sprite = null;
 				_inDialogue = false;
 				return;
 			}
@@ -67,10 +69,17 @@ namespace _Scripts.GUI
 			_diagText.text = _speeches[_dialogueIndex];
 
 			if (_faceOrderIndex % 2 == 0)
+			{
+				_rightSpeaker.color = new Color(1f, 1f, 1f, 0.5f);
+				_leftSpeaker.color = Color.white;
 				_leftSpeaker.sprite = _faces[_facesOrder[_faceOrderIndex]];
+			}
 			else
+			{
+				_leftSpeaker.color = new Color(1f, 1f, 1f, 0.5f);
+				_rightSpeaker.color = Color.white;
 				_rightSpeaker.sprite = _faces[_facesOrder[_faceOrderIndex]];
-
+			}
 			++_faceOrderIndex;
 			++_dialogueIndex;
 		}
@@ -88,10 +97,12 @@ namespace _Scripts.GUI
 			_diagText.text = _speeches[_dialogueIndex];
 			++_dialogueIndex;
 
-			_leftSpeaker.sprite = faces[facesOrder[_faceOrderIndex]];
-			++_faceOrderIndex;
+			_leftSpeaker.sprite = faces[facesOrder[_faceOrderIndex++]];
+			_rightSpeaker.sprite = faces[facesOrder[_faceOrderIndex]];
+			_rightSpeaker.color = new Color(1f, 1f, 1f, 0.5f);
 
 			PlayerManager.Instance.FreezePlayer();
+			_leftSpeaker.color = Color.white;
 			_canvasGroup.DOFade(1f, 0.1f);
 			_inDialogue = true;
 		}
