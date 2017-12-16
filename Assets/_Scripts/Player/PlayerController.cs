@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using UnityEditorInternal;
 using UnityEngine;
 using _Scripts.Objects;
@@ -12,6 +13,8 @@ namespace _Scripts.Player
 		[SerializeField] private float _runSpeedMultiplier;
 		[SerializeField] private float _raycastRange;
 
+
+		private Animator _playerAnimator;
 		private Ray _raycastRay;
 		private Transform _playerTransform;
 		public bool Frozen { get; set; }
@@ -20,6 +23,7 @@ namespace _Scripts.Player
 		{
 			_playerTransform = transform;
 			_raycastRay = new Ray();
+			_playerAnimator = GetComponent<Animator>();
 		}
 	
 		// Update is called once per frame
@@ -27,7 +31,16 @@ namespace _Scripts.Player
 		{
 			if (Frozen) return;
 
-			Vector3 inputs = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+			float h = Input.GetAxisRaw("Horizontal");
+			float v = 0f;
+			if (Math.Abs(h) < 0.0001f)
+				v = Input.GetAxisRaw("Vertical");
+
+
+			_playerAnimator.SetInteger("Vertical", Mathf.RoundToInt(v));
+			_playerAnimator.SetInteger("Horizontal", Mathf.RoundToInt(h));
+
+			Vector3 inputs = new Vector3(h, v);
 
 			if (inputs.magnitude > 0)
 			{

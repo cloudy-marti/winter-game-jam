@@ -98,8 +98,13 @@ namespace _Scripts.GUI
 			++_dialogueIndex;
 
 			_leftSpeaker.sprite = faces[facesOrder[_faceOrderIndex++]];
-			_rightSpeaker.sprite = faces[facesOrder[_faceOrderIndex]];
-			_rightSpeaker.color = new Color(1f, 1f, 1f, 0.5f);
+			if (faces.Length > 1)
+			{
+				_rightSpeaker.sprite = faces[facesOrder[_faceOrderIndex]];
+				_rightSpeaker.color = new Color(1f, 1f, 1f, 0.5f);
+			}
+			else
+				_rightSpeaker.color = new Color(1f, 1f, 1f, 0f);
 
 			PlayerManager.Instance.FreezePlayer();
 			_leftSpeaker.color = Color.white;
