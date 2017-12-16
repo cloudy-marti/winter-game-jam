@@ -1,18 +1,18 @@
 ﻿using DG.Tweening;
+using UnityEditorInternal;
 using UnityEngine;
+using _Scripts.Objects;
 
 namespace _Scripts.Player
 {
 
 	public class PlayerController : MonoBehaviour
 	{
-		private GameObject _objectInRange = null;
-
-
 		[SerializeField] private float _speed;
 		[SerializeField] private float _runSpeedMultiplier;
-		[SerializeField] private Transform _rangeTransform;
+
 		private Transform _playerTransform;
+		public bool Frozen { get; set; }
 
 		void Start ()
 		{
@@ -20,20 +20,25 @@ namespace _Scripts.Player
 		}
 	
 		// Update is called once per frame
-		void Update () {
+		void Update ()
+		{
+			if (Frozen) return;
+
 			Vector3 inputs = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
 			inputs *= _speed;
-			if (inputs.magnitude > 0)
-				_rangeTransform.position = _playerTransform.position + inputs * 1.5f;
+			inputs *= Input.GetAxisRaw("Run") > 0 ? _runSpeedMultiplier : 1f;
 
-			inputs *= (Input.GetAxisRaw("Run") > 0 ? _runSpeedMultiplier : 1f);
-			_playerTransform.DOMove(inputs + _playerTransform.position, 1f);
+			_playerTransform.DOMove(_playerTransform.position + inputs, 1f);
 
 			if (Input.GetAxis("Interact") > 0)
 			{
-				// interact
+
 			}
+		}
+
+		void OnDrawGizmos()
+		{
 		}
 	}
 }
