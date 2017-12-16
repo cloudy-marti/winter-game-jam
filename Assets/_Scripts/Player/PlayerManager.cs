@@ -6,7 +6,6 @@ namespace _Scripts.Player
 	public class PlayerManager : MonoBehaviour
 	{
 		public static PlayerManager Instance { get; private set; }
-		public bool DialogueMode { get; set; }
 		private GameObject _playerInstance;
 
 		[SerializeField] private GameObject _playerPrefab;
@@ -15,7 +14,7 @@ namespace _Scripts.Player
 		{
 			Instance = this;
 		}
-
+		
 		public void SpawnPlayer(Vector3 pos)
 		{
 			if (!_playerInstance)
@@ -29,6 +28,16 @@ namespace _Scripts.Player
 		{
 			if (!_playerInstance) return;
 			_playerInstance.transform.position = pos;
+		}
+
+		public void FreezePlayer()
+		{
+			_playerInstance.GetComponent<PlayerController>().Frozen = true;
+		}
+
+		public void UnfreezePlayer()
+		{
+			_playerInstance.GetComponent<PlayerController>().Frozen = false;
 		}
 
 	}

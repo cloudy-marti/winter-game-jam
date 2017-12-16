@@ -1,6 +1,8 @@
-﻿using DG.Tweening;
+﻿using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using _Scripts.Player;
 
 namespace _Scripts.GUI
 {
@@ -27,9 +29,17 @@ namespace _Scripts.GUI
 			_diagText = _dialogPrefabInstance.transform.Find("DiagBackground/DiagText").GetComponent<Text>();
 		}
 
+		public void Update()
+		{
+			if (!(Input.GetAxisRaw("Submit") > 0) || !(_canvasGroup.alpha > 0)) return;
+			_canvasGroup.DOFade(0f, 0.5f);
+			PlayerManager.Instance.UnfreezePlayer();
+		}
+
 		public void Show(string dialogue)
 		{
-			_canvasGroup.DOFade(1f, 1f);
+			PlayerManager.Instance.FreezePlayer();
+			_canvasGroup.DOFade(1f, 0.5f);
 			_diagText.text = dialogue;
 		}
 	}

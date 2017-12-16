@@ -32,13 +32,15 @@ namespace _Scripts.Player
 			if (inputs.magnitude > 0)
 			{
 				_raycastRay.origin = _playerTransform.position;
-				_raycastRay.direction = _playerTransform.position + inputs * _raycastRange;
+				_raycastRay.direction = (_playerTransform.position + inputs) - _raycastRay.origin;
+				_raycastRay.direction *= _raycastRange;
 			}
 
 			inputs *= _speed;
 			inputs *= Input.GetAxisRaw("Run") > 0 ? _runSpeedMultiplier : 1f;
+			inputs *= Time.deltaTime;
 
-			_playerTransform.DOMove(_playerTransform.position + inputs, 1f);
+			_playerTransform.position += inputs;
 
 			if (!(Input.GetAxis("Interact") > 0)) return;
 			RaycastHit raycastHit;
@@ -47,12 +49,6 @@ namespace _Scripts.Player
 
 			if (raycastHit.transform.CompareTag("InteractiveObject"))
 				raycastHit.transform.GetComponent<InteractiveObject>().Interact();
-		}
-
-		void OnDrawGizmos()
-		{
-			Gizmos.color = Color.cyan;
-			Gizmos.DrawRay(_raycastRay);
 		}
 	}
 }
