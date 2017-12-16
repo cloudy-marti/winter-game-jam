@@ -10,7 +10,7 @@ namespace _Scripts.Objects
 
 		public void Interact()
 		{
-			DialogueManager.Instance.Show(_dialogue.Speakers, _dialogue.Speeches);
+			DialogueManager.Instance.Show(_dialogue.Speakers, _dialogue.Speeches, _dialogue.Faces, _dialogue.FacesOrder);
 		}
 	}
 }

@@ -9,15 +9,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 458a6838426c43f45bfcfff8b23d19c4, type: 3}
-  m_Name: Test
+  m_Name: Tooltips
   m_EditorClassIdentifier: 
-  FacesOrder: 0000000001000000
+  FacesOrder: 00000000030000000100000002000000
   Faces:
-  - {fileID: 21300000, guid: 6fea0d7d79489f744ac91d67eff91a71, type: 3}
   - {fileID: 21300012, guid: 6fea0d7d79489f744ac91d67eff91a71, type: 3}
+  - {fileID: 21300000, guid: 6fea0d7d79489f744ac91d67eff91a71, type: 3}
+  - {fileID: 21300032, guid: 6fea0d7d79489f744ac91d67eff91a71, type: 3}
+  - {fileID: 21300046, guid: 6fea0d7d79489f744ac91d67eff91a71, type: 3}
   Speakers:
-  - Narrateur
-  - Narrateur2
+  - Perso1
+  - Perso2
+  - Perso1
+  - Perso1
   Speeches:
-  - J'ai rien a dire
-  - Moi aussi
+  - Test1
+  - Test2
+  - Test3
+  - Test4
