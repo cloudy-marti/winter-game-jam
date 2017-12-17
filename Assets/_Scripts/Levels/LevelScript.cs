@@ -7,7 +7,7 @@ namespace _Scripts.Levels
 	{
 		[SerializeField] private Vector3 _playerStart;
 		[SerializeField] private Vector3 _playerScale = Vector3.one;
-		[SerializeField] private Color _playerColor;
+		[SerializeField] private Color _playerColor = Color.white;
 
 		// Use this for initialization
 		void Start ()
