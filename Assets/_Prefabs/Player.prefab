@@ -212,7 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3
   _runSpeedMultiplier: 2
-  _raycastRange: 5
+  _raycastRange: 0.5
   _snowBallPrefab: {fileID: 1800186302755182, guid: b5602e82eefe42e41a86d10db5a76b0f,
     type: 2}
   _snowBallCooldown: 1

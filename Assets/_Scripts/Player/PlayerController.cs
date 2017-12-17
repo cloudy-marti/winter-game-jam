@@ -1,7 +1,7 @@
 ﻿using System;
 using DG.Tweening;
-using UnityEditorInternal;
 using UnityEngine;
+using _Scripts.Levels;
 using _Scripts.Objects;
 
 namespace _Scripts.Player
@@ -52,7 +52,7 @@ namespace _Scripts.Player
 			{
 				_raycastRay.origin = _playerTransform.position;
 				_raycastRay.direction = (_playerTransform.position + inputs) - _raycastRay.origin;
-				_raycastRay.direction *= _raycastRange;
+				
 			}
 
 			inputs *= _speed;
@@ -76,10 +76,18 @@ namespace _Scripts.Player
 			if (!(Input.GetAxis("Interact") > 0)) return;
 			RaycastHit raycastHit;
 
-			if (!Physics.Raycast(_raycastRay, out raycastHit)) return;
+			if (!Physics.Raycast(_raycastRay, out raycastHit, _raycastRange)) return;
 
 			if (raycastHit.transform.CompareTag("InteractiveObject"))
-				raycastHit.transform.GetComponent<InteractiveObject>().Interact();
+			{
+				InteractiveObject obj = raycastHit.transform.GetComponent<InteractiveObject>();
+				if (obj != null)
+					obj.Interact();
+
+				LevelLoader lvl = raycastHit.transform.GetComponent<LevelLoader>();
+				if (lvl != null)
+					lvl.LoadLevel();
+			}
 		}
 	}
 }
