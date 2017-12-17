@@ -171,9 +171,10 @@ GameObject:
   - component: {fileID: 22468256}
   - component: {fileID: 22468258}
   - component: {fileID: 22468257}
+  - component: {fileID: 22468259}
   m_Layer: 0
   m_Name: lighting (1)
-  m_TagString: Untagged
+  m_TagString: InteractiveObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,8 +186,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 22468255}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.41, y: 1.7, z: 0}
-  m_LocalScale: {x: 0.91249996, y: 2.0125, z: 1}
+  m_LocalPosition: {x: 7.27, y: 1.7, z: 0}
+  m_LocalScale: {x: 1.3231243, y: 2.0125, z: 1}
   m_Children: []
   m_Father: {fileID: 1106167585}
   m_RootOrder: 1
@@ -210,6 +211,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 22468255}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &22468259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 22468255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5856037f81fd815428bdbcd5a86740f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogue: {fileID: 11400000, guid: 4b07eee33d0bbe443a61d13e3313784d, type: 2}
 --- !u!1 &32046890
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,9 +499,10 @@ GameObject:
   - component: {fileID: 351221231}
   - component: {fileID: 351221233}
   - component: {fileID: 351221232}
+  - component: {fileID: 351221234}
   m_Layer: 0
   m_Name: lighting
-  m_TagString: Untagged
+  m_TagString: InteractiveObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -501,7 +515,7 @@ Transform:
   m_GameObject: {fileID: 351221230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.2, y: -3.19, z: 0}
-  m_LocalScale: {x: 0.9125, y: 2.0125, z: 1}
+  m_LocalScale: {x: 1.3573436, y: 2.5665658, z: 1}
   m_Children: []
   m_Father: {fileID: 1106167585}
   m_RootOrder: 0
@@ -525,6 +539,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 351221230}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &351221234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 351221230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5856037f81fd815428bdbcd5a86740f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogue: {fileID: 11400000, guid: f0a4b3b7c9fb8bd448247db82ad2c54d, type: 2}
 --- !u!1 &424210717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,9 +1060,10 @@ GameObject:
   - component: {fileID: 1367686220}
   - component: {fileID: 1367686222}
   - component: {fileID: 1367686221}
+  - component: {fileID: 1367686223}
   m_Layer: 0
   m_Name: lighting (2)
-  m_TagString: Untagged
+  m_TagString: InteractiveObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1049,7 +1076,7 @@ Transform:
   m_GameObject: {fileID: 1367686219}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.03, y: 9.07, z: 0}
-  m_LocalScale: {x: 0.91249996, y: 2.0125, z: 1}
+  m_LocalScale: {x: 1.3084409, y: 2.5407815, z: 1}
   m_Children: []
   m_Father: {fileID: 1106167585}
   m_RootOrder: 2
@@ -1073,6 +1100,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1367686219}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1367686223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367686219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5856037f81fd815428bdbcd5a86740f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogue: {fileID: 11400000, guid: 50af747fe6949014ca0ae2469cb61576, type: 2}
 --- !u!1 &1535200004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,8 +1234,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1824913177}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.64, y: 8.9, z: 0}
-  m_LocalScale: {x: 16.06599, y: 2.5055099, z: 3.19349}
+  m_LocalPosition: {x: 3.02, y: 8.9, z: 0}
+  m_LocalScale: {x: 14.660215, y: 2.5055099, z: 3.19349}
   m_Children: []
   m_Father: {fileID: 588195733}
   m_RootOrder: 5
