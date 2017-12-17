@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using _Scripts.Player;
 
 namespace _Scripts.Levels
@@ -13,7 +14,7 @@ namespace _Scripts.Levels
 		[SerializeField] private float _playerSpeed;
 
 		// Use this for initialization
-		void Start ()
+		protected void Start ()
 		{
 			PlayerManager.Instance.SpawnPlayer(_playerStart, _playerScale, _playerColor, _playerSpeed, _cameraSize);
 			MusicManager.Instance.SetClip(_clipToPlay);

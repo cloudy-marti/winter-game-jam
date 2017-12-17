@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
+using _Scripts.Diags;
 using _Scripts.GUI;
-using _Scripts.ItemDescription;
 
 namespace _Scripts.Objects
 {

@@ -86,6 +86,12 @@ namespace _Scripts.GUI
 
 		public void Show(string[] speakers, string[] speeches, Sprite[] faces, uint[] facesOrder)
 		{
+			if (_dialogueIndex > 0)
+			{
+				_dialogueIndex = 0;
+				_faceOrderIndex = 0;
+			}
+
 			if (speakers.Length != speeches.Length && speeches.Length != facesOrder.Length) return;
 
 			_speakers = speakers;

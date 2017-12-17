@@ -15,6 +15,8 @@ namespace _Scripts.Player
 			Instance = this;
 		}
 		
+
+
 		public void SpawnPlayer(Vector3 pos, Vector3 scale, Color color, float speed, float cameraSize)
 		{
 			if (!_playerInstance)

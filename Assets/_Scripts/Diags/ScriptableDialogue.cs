@@ -1,7 +1,6 @@
-﻿using System.Runtime.InteropServices;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace _Scripts.ItemDescription
+namespace _Scripts.Diags
 {
 	[CreateAssetMenu(fileName = "Tooltips", menuName = "Other/ScriptableDialogue", order = 1)]
 	public class ScriptableDialogue : ScriptableObject

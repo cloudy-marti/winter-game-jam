@@ -17,7 +17,7 @@ namespace _Scripts.Player
 		[SerializeField] private float _snowBallCooldown;
 		private float _snowballTimer;
 
-		private Animator _playerAnimator;
+		public Animator PlayerAnimator { get; private set; }
 		private Ray _raycastRay;
 		private Transform _playerTransform;
 		private Rigidbody _body;
@@ -27,7 +27,7 @@ namespace _Scripts.Player
 		{
 			_playerTransform = transform;
 			_raycastRay = new Ray();
-			_playerAnimator = GetComponent<Animator>();
+			PlayerAnimator = GetComponent<Animator>();
 			_body = GetComponent<Rigidbody>();
 		}
 	
@@ -43,8 +43,8 @@ namespace _Scripts.Player
 				v = Input.GetAxisRaw("Vertical");
 
 
-			_playerAnimator.SetInteger("Vertical", Mathf.RoundToInt(v));
-			_playerAnimator.SetInteger("Horizontal", Mathf.RoundToInt(h));
+			PlayerAnimator.SetInteger("Vertical", Mathf.RoundToInt(v));
+			PlayerAnimator.SetInteger("Horizontal", Mathf.RoundToInt(h));
 
 			Vector3 inputs = new Vector3(h, v);
 
