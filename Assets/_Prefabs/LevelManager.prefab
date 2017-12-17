@@ -54,3 +54,6 @@ MonoBehaviour:
   _playerStart: {x: 0, y: 0, z: -5}
   _playerScale: {x: 1, y: 1, z: 1}
   _playerColor: {r: 1, g: 1, b: 1, a: 1}
+  _cameraSize: 5
+  _clipToPlay: {fileID: 0}
+  _playerSpeed: 200

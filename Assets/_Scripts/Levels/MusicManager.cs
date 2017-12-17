@@ -11,6 +11,7 @@ namespace _Scripts.Levels
 
 		void Awake()
 		{
+			if (Instance) return;
 			Instance = this;
 			_audioSource = gameObject.GetComponent<AudioSource>();
 			_audioSource.clip = null;

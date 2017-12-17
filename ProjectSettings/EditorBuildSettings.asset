@@ -11,3 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/00Intro/002_LivingRoom.unity
     guid: ee18745be3e7ade49a213ca652d84003
+  - enabled: 1
+    path: Assets/_Scenes/00Intro/003_Garden.unity
+    guid: eeaf6633672661e41a97b26ac8a651a2
+  - enabled: 1
+    path: Assets/_Scenes/01_Citadel/Citadel.unity
+    guid: 47ebe30d91c74434c99440593432489c
+  - enabled: 1
+    path: Assets/_Scenes/02_Forest/Forest.unity
+    guid: 4c16fae148965d04fa015ed086ef45f4
+  - enabled: 1
+    path: Assets/_Scenes/03_Boss/bossSite.unity
+    guid: de1a06ae62b4d7e4889f2eba8b359ed5

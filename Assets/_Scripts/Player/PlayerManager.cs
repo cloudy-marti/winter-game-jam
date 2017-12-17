@@ -6,7 +6,7 @@ namespace _Scripts.Player
 	public class PlayerManager : MonoBehaviour
 	{
 		public static PlayerManager Instance { get; private set; }
-		private GameObject _playerInstance;
+		public GameObject _playerInstance { get; private set; }
 
 		[SerializeField] private GameObject _playerPrefab;
 
@@ -15,13 +15,14 @@ namespace _Scripts.Player
 			Instance = this;
 		}
 		
-		public void SpawnPlayer(Vector3 pos, Vector3 scale, Color color, float cameraSize)
+		public void SpawnPlayer(Vector3 pos, Vector3 scale, Color color, float speed, float cameraSize)
 		{
 			if (!_playerInstance)
 			{
 				_playerInstance = Instantiate(_playerPrefab);
 				_playerInstance.transform.localScale = scale;
 				_playerInstance.GetComponent<SpriteRenderer>().color = color;
+				_playerInstance.GetComponent<PlayerController>().Speed = speed;
 				Camera.main.orthographicSize = cameraSize;
 			}
 			TeleportPlayer(pos);

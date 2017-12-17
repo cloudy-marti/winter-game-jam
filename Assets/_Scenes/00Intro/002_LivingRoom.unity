@@ -170,11 +170,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4966806624221972, guid: 1885177f3041d0a4d89c33638245ed73, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.11
       objectReference: {fileID: 0}
     - target: {fileID: 4966806624221972, guid: 1885177f3041d0a4d89c33638245ed73, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.65
       objectReference: {fileID: 0}
     - target: {fileID: 4966806624221972, guid: 1885177f3041d0a4d89c33638245ed73, type: 2}
       propertyPath: m_LocalPosition.z
@@ -203,18 +203,48 @@ Prefab:
     - target: {fileID: 114554591004343810, guid: 1885177f3041d0a4d89c33638245ed73,
         type: 2}
       propertyPath: _playerStart.x
-      value: 3.8
+      value: -3.11
       objectReference: {fileID: 0}
     - target: {fileID: 114554591004343810, guid: 1885177f3041d0a4d89c33638245ed73,
         type: 2}
       propertyPath: _playerStart.y
-      value: 1.16
+      value: -3.65
       objectReference: {fileID: 0}
     - target: {fileID: 114554591004343810, guid: 1885177f3041d0a4d89c33638245ed73,
         type: 2}
       propertyPath: _clipToPlay
       value: 
       objectReference: {fileID: 8300000, guid: 6d7eae191023579449bc58d8ffd7b4ae, type: 3}
+    - target: {fileID: 114554591004343810, guid: 1885177f3041d0a4d89c33638245ed73,
+        type: 2}
+      propertyPath: _cameraSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114554591004343810, guid: 1885177f3041d0a4d89c33638245ed73,
+        type: 2}
+      propertyPath: _playerScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114554591004343810, guid: 1885177f3041d0a4d89c33638245ed73,
+        type: 2}
+      propertyPath: _playerScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114554591004343810, guid: 1885177f3041d0a4d89c33638245ed73,
+        type: 2}
+      propertyPath: _playerStart.x
+      value: -3.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114554591004343810, guid: 1885177f3041d0a4d89c33638245ed73,
+        type: 2}
+      propertyPath: _playerStart.y
+      value: -3.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 114554591004343810, guid: 1885177f3041d0a4d89c33638245ed73,
+        type: 2}
+      propertyPath: _playerSpeed
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1885177f3041d0a4d89c33638245ed73, type: 2}
   m_IsPrefabParent: 0
@@ -320,9 +350,10 @@ GameObject:
   - component: {fileID: 245199207}
   - component: {fileID: 245199209}
   - component: {fileID: 245199208}
+  - component: {fileID: 245199210}
   m_Layer: 0
   m_Name: door (1)
-  m_TagString: Untagged
+  m_TagString: InteractiveObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -334,8 +365,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 245199206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.44, y: 3.2, z: 0.10830905}
-  m_LocalScale: {x: 1.6290473, y: 1.784376, z: 4.7917595}
+  m_LocalPosition: {x: 9.19, y: 3.2, z: 0.10830905}
+  m_LocalScale: {x: 2.05, y: 1.784376, z: 4.7917595}
   m_Children: []
   m_Father: {fileID: 293883713}
   m_RootOrder: 5
@@ -359,6 +390,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 245199206}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &245199210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 245199206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e69ff1ce8b0e9848a15776aa5da9247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelToLoad: 003_Garden
 --- !u!1 &293883712
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,9 +446,10 @@ GameObject:
   - component: {fileID: 316414886}
   - component: {fileID: 316414888}
   - component: {fileID: 316414887}
+  - component: {fileID: 316414889}
   m_Layer: 0
   m_Name: door
-  m_TagString: Untagged
+  m_TagString: InteractiveObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -417,8 +461,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 316414885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.58, y: -2.46, z: 0.10830905}
-  m_LocalScale: {x: 2.0621893, y: 0.9587795, z: 4.473551}
+  m_LocalPosition: {x: 0.58, y: -2.01, z: 0.10830905}
+  m_LocalScale: {x: 2.0621893, y: 1.62, z: 4.473551}
   m_Children: []
   m_Father: {fileID: 293883713}
   m_RootOrder: 4
@@ -442,6 +486,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 316414885}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &316414889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 316414885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e69ff1ce8b0e9848a15776aa5da9247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelToLoad: 001_BedRoom
 --- !u!1001 &329519043
 Prefab:
   m_ObjectHideFlags: 0

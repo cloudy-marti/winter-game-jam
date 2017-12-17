@@ -9,7 +9,7 @@ namespace _Scripts.Player
 
 	public class PlayerController : MonoBehaviour
 	{
-		[SerializeField] private float _speed;
+		[SerializeField] public float Speed;
 		[SerializeField] private float _runSpeedMultiplier;
 		[SerializeField] private float _raycastRange;
 		[SerializeField] private GameObject _snowBallPrefab;
@@ -20,6 +20,7 @@ namespace _Scripts.Player
 		private Animator _playerAnimator;
 		private Ray _raycastRay;
 		private Transform _playerTransform;
+		private Rigidbody _body;
 		public bool Frozen { get; set; }
 
 		void Start ()
@@ -27,13 +28,13 @@ namespace _Scripts.Player
 			_playerTransform = transform;
 			_raycastRay = new Ray();
 			_playerAnimator = GetComponent<Animator>();
+			_body = GetComponent<Rigidbody>();
 		}
 	
 		// Update is called once per frame
-		void Update ()
+		void FixedUpdate ()
 		{
 			if (Frozen) return;
-
 
 
 			float h = Input.GetAxisRaw("Horizontal");
@@ -55,9 +56,9 @@ namespace _Scripts.Player
 				
 			}
 
-			inputs *= _speed;
+			inputs *= Speed;
 			inputs *= Input.GetAxisRaw("Run") > 0 ? _runSpeedMultiplier : 1f;
-			inputs *= Time.deltaTime;
+			inputs *= Time.fixedDeltaTime;
 
 			if (Input.GetAxisRaw("Fire") > 0 && _snowballTimer >= _snowBallCooldown)
 			{
@@ -71,7 +72,7 @@ namespace _Scripts.Player
 				_snowballTimer = 0;
 			}
 			_snowballTimer += Time.deltaTime;
-			_playerTransform.position += inputs;
+			_body.velocity = inputs;
 
 			if (!(Input.GetAxis("Interact") > 0)) return;
 			RaycastHit raycastHit;

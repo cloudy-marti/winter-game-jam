@@ -70,13 +70,13 @@ namespace _Scripts.GUI
 
 			if (_faceOrderIndex % 2 == 0)
 			{
-				_rightSpeaker.color = new Color(1f, 1f, 1f, 0.5f);
+				_rightSpeaker.color = new Color(1f, 1f, 1f, 0.0f);
 				_leftSpeaker.color = Color.white;
 				_leftSpeaker.sprite = _faces[_facesOrder[_faceOrderIndex]];
 			}
 			else
 			{
-				_leftSpeaker.color = new Color(1f, 1f, 1f, 0.5f);
+				_leftSpeaker.color = new Color(1f, 1f, 1f, 0.0f);
 				_rightSpeaker.color = Color.white;
 				_rightSpeaker.sprite = _faces[_facesOrder[_faceOrderIndex]];
 			}
@@ -101,10 +101,8 @@ namespace _Scripts.GUI
 			if (faces.Length > 1)
 			{
 				_rightSpeaker.sprite = faces[facesOrder[_faceOrderIndex]];
-				_rightSpeaker.color = new Color(1f, 1f, 1f, 0.5f);
 			}
-			else
-				_rightSpeaker.color = new Color(1f, 1f, 1f, 0f);
+			_rightSpeaker.color = new Color(1f, 1f, 1f, 0.0f);
 
 			PlayerManager.Instance.FreezePlayer();
 			_leftSpeaker.color = Color.white;
