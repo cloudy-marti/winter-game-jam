@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458a6838426c43f45bfcfff8b23d19c4, type: 3}
+  m_Name: masterSwordFoundII
+  m_EditorClassIdentifier: 
+  FacesOrder: 0300000004000000050000000500000001000000070000000300000004000000060000000400000002000000050000000300000005000000
+  Faces:
+  - {fileID: 21300000, guid: 6ea447cd7efd6db44aa9faaf01a18de6, type: 3}
+  - {fileID: 21300000, guid: d0e4ae95566130c4ea442b37ae50fae5, type: 3}
+  - {fileID: 21300000, guid: aa8e391ad78e6c047938ce0cbededc5a, type: 3}
+  - {fileID: 21300000, guid: 0b7749514f07dd74bac78b656863d4cc, type: 3}
+  - {fileID: 21300000, guid: 7a9d4aa0677c0074bb0295bee70b2726, type: 3}
+  - {fileID: 21300000, guid: 1999028b191de3a40857c52df7776401, type: 3}
+  - {fileID: 21300000, guid: 41117c04d707aec4c8f7b7906dc509e7, type: 3}
+  - {fileID: 21300000, guid: abef39b8a932b204dbe67be4724efa47, type: 3}
+  - {fileID: 21300000, guid: e2119af58f3ed594dae560be1b1acb69, type: 3}
+  Speakers:
+  - Link Jr
+  - Link Jr
+  - "P\xE9p\xE9 Link"
+  - "P\xE9p\xE9 Link"
+  - Link Jr
+  - "P\xE9p\xE9 Link"
+  - Link Jr
+  - Link Jr
+  - "P\xE9p\xE9 Link"
+  - Link Jr
+  - Link Jr
+  - "P\xE9p\xE9 Link"
+  - Link Jr
+  - "P\xE9p\xE9 Link"
+  Speeches:
+  - "Ah ! P\xE9 ... p\xE9p\xE9 ... ?"
+  - '...'
+  - '...'
+  - Alors, t'es fier de toi ?
+  - Euh ...
+  - "Heureusement que j'\xE9tait l\xE0 pour racheter ma propre \xE9p\xE9e \xE0 temps
+    non ?"
+  - "C'\xE9 ... c'\xE9tait toi l'acheteur ?"
+  - "Pourquoi tu ne me l'as pas dit ? J'\xE9tait mort d'inqui\xE9tude !"
+  - "\xC7a te servira de le\xE7on !"
+  - Pfff ...
+  - (si je fait mon penaud il ne va pas me punir ... )
+  - Ah, et t'es puni une semaine sans nutella !
+  - Nooooooon !
+  - "Allez, go \xE0 la maison !"
