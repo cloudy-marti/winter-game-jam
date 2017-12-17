@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458a6838426c43f45bfcfff8b23d19c4, type: 3}
+  m_Name: weirdoDialog
+  m_EditorClassIdentifier: 
+  FacesOrder: 07000000040000000600000003000000050000000400000007000000040000000800000004000000080000000100000008000000030000000600000004000000070000000400000008000000030000000400000000000000
+  Faces:
+  - {fileID: 21300000, guid: 6ea447cd7efd6db44aa9faaf01a18de6, type: 3}
+  - {fileID: 21300000, guid: d0e4ae95566130c4ea442b37ae50fae5, type: 3}
+  - {fileID: 21300000, guid: aa8e391ad78e6c047938ce0cbededc5a, type: 3}
+  - {fileID: 21300000, guid: 0b7749514f07dd74bac78b656863d4cc, type: 3}
+  - {fileID: 21300000, guid: 7a9d4aa0677c0074bb0295bee70b2726, type: 3}
+  - {fileID: 21300000, guid: fa2ea78991686e04ea09e694fbd2eb70, type: 3}
+  - {fileID: 21300000, guid: f9cc95d78121b3a4093eeaf5178b5fc8, type: 3}
+  - {fileID: 21300000, guid: 3502654740c38e44c9d9c90d1040c998, type: 3}
+  - {fileID: 21300000, guid: 0f9dc2164bb130046ae2df03b04c1bf8, type: 3}
+  Speakers:
+  - ???
+  - Link Jr
+  - Monsieur bizarre
+  - Link Jr
+  - Apparemment un soldat
+  - Link Jr
+  - Monsieur chiant
+  - Link Jr
+  - "Monsieur bizarre fach\xE9"
+  - Link Jr
+  - Monsieur qui ne se tait jamais
+  - Link Jr
+  - "Monsieur qui me casse les boules de no\xEBl"
+  - Link Jr
+  - Je vais lui tomber dessus
+  - Link Jr
+  - Monsieur malaisant
+  - Link Jr
+  - Monsieur bizarre
+  - Link Jr
+  - Link Jr
+  - Link Jr
+  Speeches:
+  - "Oh ! Quelle surprise ! Que fait un jeune gar\xE7on tout seul par ici ?"
+  - Euh ...
+  - Tu arrives au bon moment !
+  - Pourquoi ?
+  - "Parce que je recrute ! Joins-toi \xE0 la garde de la princesse ..."
+  - Ah ? Mais non !
+  - "Pourquoi non ? Cela ferait plaisir \xE0 la princesse et tous les hommes veulent
+    lui plaire."
+  - "Mais pourquoi je voudrais lui plaire \xE0 un vieux crouton ?!"
+  - '...'
+  - "... Avez-vous vu une \xE9p\xE9e ... volante par hasard ?"
+  - "Ah ! Les jeunes et ses jouets d\xE9biles ! Ils pensent qu'ils vont devenir des
+    h\xE9ros rien qu'en imitant ses tenues et ses armes !"
+  - Mais ce n'est pas un jouet ...
+  - "Etre un h\xE9ro va au dela de la simple esth\xE9tique ... je l'ai vendue au premier
+    passant !"
+  - Quoi ?!
+  - "Encore un malheureux na\xEFf ! Rejoins l'arm\xE9e et apprends a brandir un vraie
+    \xE9p\xE9e et deviens un homme !"
+  - Ah non je ne veux pas devenir un homme !
+  - Que dis-tu mon petit ?
+  - "Par o\xF9 est-t'il parti ? D\xEEtes le moi !"
+  - "Dans la foret ! L\xE0 o\xF9 une \xE9p\xE9e en carton n'a rien \xE0 y faire !
+    Vois-tu mon petit, moi \xE0 ton \xE2ge ..."
+  - '...'
+  - '...'
+  - "Ouf j'ai pu m'\xE9chapper."
