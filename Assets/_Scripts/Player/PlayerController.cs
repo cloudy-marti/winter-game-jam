@@ -12,7 +12,10 @@ namespace _Scripts.Player
 		[SerializeField] private float _speed;
 		[SerializeField] private float _runSpeedMultiplier;
 		[SerializeField] private float _raycastRange;
+		[SerializeField] private GameObject _snowBallPrefab;
 
+		[SerializeField] private float _snowBallCooldown;
+		private float _snowballTimer;
 
 		private Animator _playerAnimator;
 		private Ray _raycastRay;
@@ -31,6 +34,8 @@ namespace _Scripts.Player
 		{
 			if (Frozen) return;
 
+
+
 			float h = Input.GetAxisRaw("Horizontal");
 			float v = 0f;
 			if (Math.Abs(h) < 0.0001f)
@@ -41,6 +46,7 @@ namespace _Scripts.Player
 			_playerAnimator.SetInteger("Horizontal", Mathf.RoundToInt(h));
 
 			Vector3 inputs = new Vector3(h, v);
+
 
 			if (inputs.magnitude > 0)
 			{
@@ -53,6 +59,18 @@ namespace _Scripts.Player
 			inputs *= Input.GetAxisRaw("Run") > 0 ? _runSpeedMultiplier : 1f;
 			inputs *= Time.deltaTime;
 
+			if (Input.GetAxisRaw("Fire") > 0 && _snowballTimer >= _snowBallCooldown)
+			{
+				Vector3 dest = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+				dest.z = -5;
+				GameObject instance = Instantiate(_snowBallPrefab, transform.position + inputs, Quaternion.identity);
+				instance.transform.DOMove(dest, 0.5f).SetEase(Ease.Linear).OnComplete(() =>
+				{
+					Destroy(instance);
+				});
+				_snowballTimer = 0;
+			}
+			_snowballTimer += Time.deltaTime;
 			_playerTransform.position += inputs;
 
 			if (!(Input.GetAxis("Interact") > 0)) return;
