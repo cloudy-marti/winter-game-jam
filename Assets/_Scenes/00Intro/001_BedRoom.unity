@@ -776,8 +776,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114554591004343810, guid: 1885177f3041d0a4d89c33638245ed73,
         type: 2}
-      propertyPath: _playerStart.z
-      value: -5
+      propertyPath: _cameraSize
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1885177f3041d0a4d89c33638245ed73, type: 2}

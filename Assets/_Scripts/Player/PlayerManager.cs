@@ -15,13 +15,14 @@ namespace _Scripts.Player
 			Instance = this;
 		}
 		
-		public void SpawnPlayer(Vector3 pos, Vector3 scale, Color color)
+		public void SpawnPlayer(Vector3 pos, Vector3 scale, Color color, float cameraSize)
 		{
 			if (!_playerInstance)
 			{
 				_playerInstance = Instantiate(_playerPrefab);
 				_playerInstance.transform.localScale = scale;
 				_playerInstance.GetComponent<SpriteRenderer>().color = color;
+				Camera.main.orthographicSize = cameraSize;
 			}
 			TeleportPlayer(pos);
 		}
