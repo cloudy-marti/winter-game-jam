@@ -9,11 +9,13 @@ namespace _Scripts.Levels
 		[SerializeField] private Vector3 _playerScale = Vector3.one;
 		[SerializeField] private Color _playerColor = Color.white;
 		[SerializeField] private float _cameraSize = 5;
+		[SerializeField] private AudioClip _clipToPlay;
 
 		// Use this for initialization
 		void Start ()
 		{
 			PlayerManager.Instance.SpawnPlayer(_playerStart, _playerScale, _playerColor, _cameraSize);
+			MusicManager.Instance.SetClip(_clipToPlay);
 		}
 	}
 }
