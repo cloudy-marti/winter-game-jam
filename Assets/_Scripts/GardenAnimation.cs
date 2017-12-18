@@ -34,7 +34,7 @@ namespace _Scripts
 			sword.transform.position = transform.position;
 
 			sword.transform.DOMove(new Vector3(-20, 0f, -10f), 2f).SetEase(Ease.Linear);
-			sword.transform.DORotate(Vector3.forward * -90, 2f).SetEase(Ease.Linear);
+			sword.transform.DORotate(Vector3.forward * -90, 1f).SetEase(Ease.Linear);
 
 			DialogueManager.Instance.Show(_diag[1].Speakers, _diag[1].Speeches, _diag[1].Faces, _diag[1].FacesOrder);
 			PlayerManager.Instance.FreezePlayer();

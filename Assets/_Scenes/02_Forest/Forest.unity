@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5856037f81fd815428bdbcd5a86740f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue: {fileID: 11400000, guid: 4b07eee33d0bbe443a61d13e3313784d, type: 2}
+  _dialogue: {fileID: 11400000, guid: 7012138046fb4df40a44f622f978159b, type: 2}
 --- !u!1 &32046890
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5856037f81fd815428bdbcd5a86740f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue: {fileID: 11400000, guid: f0a4b3b7c9fb8bd448247db82ad2c54d, type: 2}
+  _dialogue: {fileID: 11400000, guid: 508de0f826135fd42abc18a517f3a4b6, type: 2}
 --- !u!1 &509263911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5856037f81fd815428bdbcd5a86740f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue: {fileID: 11400000, guid: 50af747fe6949014ca0ae2469cb61576, type: 2}
+  _dialogue: {fileID: 11400000, guid: 285956ddcdbd5cd4eb6228f9b2725615, type: 2}
 --- !u!1 &1535200004
 GameObject:
   m_ObjectHideFlags: 0

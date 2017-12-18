@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5856037f81fd815428bdbcd5a86740f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue: {fileID: 11400000, guid: 08462ca1e2d85b74787174f5659fb6a6, type: 2}
+  _dialogue: {fileID: 11400000, guid: 3237a365751c70e4f97cd62400e8c750, type: 2}
 --- !u!65 &433617058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5856037f81fd815428bdbcd5a86740f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue: {fileID: 11400000, guid: 8b64d7e123eb5e44f88df9f1800f5806, type: 2}
+  _dialogue: {fileID: 11400000, guid: 9d7fbaeb10055b745bdf095e07a89b75, type: 2}
 --- !u!65 &1795905401
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1056,7 +1056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5856037f81fd815428bdbcd5a86740f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue: {fileID: 11400000, guid: 122f7eb79e308db4e8dbee2887109c68, type: 2}
+  _dialogue: {fileID: 11400000, guid: 44389cc7b05a4974b96a577b17559003, type: 2}
 --- !u!1 &1980107056
 GameObject:
   m_ObjectHideFlags: 0

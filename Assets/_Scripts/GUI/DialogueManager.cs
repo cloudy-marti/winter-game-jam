@@ -19,6 +19,7 @@ namespace _Scripts.GUI
 		private Image _rightSpeaker;
 		private CanvasGroup _canvasGroup;
 
+		public static bool DialogueFinish;
 		private string[] _speakers;
 		private string[] _speeches;
 		private Sprite[] _faces;
@@ -62,6 +63,7 @@ namespace _Scripts.GUI
 				_rightSpeaker.color = _leftSpeaker.color = Color.clear;
 				_rightSpeaker.sprite = _leftSpeaker.sprite = null;
 				_inDialogue = false;
+				DialogueFinish = true;
 				return;
 			}
 
@@ -86,6 +88,7 @@ namespace _Scripts.GUI
 
 		public void Show(string[] speakers, string[] speeches, Sprite[] faces, uint[] facesOrder)
 		{
+			DialogueFinish = false;
 			if (_dialogueIndex > 0)
 			{
 				_dialogueIndex = 0;

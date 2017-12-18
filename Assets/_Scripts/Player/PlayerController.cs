@@ -88,6 +88,10 @@ namespace _Scripts.Player
 				LevelLoader lvl = raycastHit.transform.GetComponent<LevelLoader>();
 				if (lvl != null)
 					lvl.LoadLevel();
+
+				EndAnimation endAn = raycastHit.transform.GetComponent<EndAnimation>();
+				if (endAn != null)
+					endAn.PlayEndAnimation();
 			}
 		}
 	}

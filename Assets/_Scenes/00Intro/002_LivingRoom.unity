@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5856037f81fd815428bdbcd5a86740f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue: {fileID: 11400000, guid: a9ed7eb3710505c478c7d6064adb1112, type: 2}
+  _dialogue: {fileID: 11400000, guid: fd200f039a1e5544eb0b67abc85bcd05, type: 2}
 --- !u!1 &221371720
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5856037f81fd815428bdbcd5a86740f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue: {fileID: 11400000, guid: 6d0b159d4bdd3364db381fce6ac967b5, type: 2}
+  _dialogue: {fileID: 11400000, guid: de6af26c0565ec94286ad299d623e5b0, type: 2}
 --- !u!1001 &1811640194
 Prefab:
   m_ObjectHideFlags: 0
